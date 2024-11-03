@@ -10,7 +10,8 @@ function NameList() {
   const[list, setList] = useState(["jack","jill","john"]);
   const[name, setName] = useState("");
   const onAddName = () => {
-    list.push(name);
+    setList([...list, name])
+    setName("")
   };
   return (
     <>
